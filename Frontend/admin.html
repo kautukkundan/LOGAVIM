@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="./libs/bootstrap.min.css">
+	<link rel="stylesheet" href="./libs/raleway.css">
+	<title>LOGAVIM</title>
+
+	<link rel="stylesheet" href="dash.css">
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<!-- header BEGINS-->
+		<div class="header">
+			<div class="header-brand">
+				<div class="ham">&#9776;</div>
+				LOGA
+				<strong>VIM</strong>
+			</div>
+			<div class="header-team-name">Team&nbsp;CheckPost</div>
+
+		</div>
+		<!-- header ENDS-->
+		<div class="pt-5">
+			<div id="s-bar" class="search-bar">
+				<input type="text" name="input" placeholder="ENTER TRACKING ID">
+				<button class="btn btn-danger">Search</button>
+			</div>
+		</div>
+
+		<!-- search results -->
+		<div id="search-results" class="row">
+			<div class="col-sm-2 admin-panel">
+				<div class="admin-actions-header">
+					<div class="text-center my-auto">
+						ADMIN ACTIONS
+					</div>
+				</div>
+				<div style="height: 40vh; overflow-y: hidden;">
+					<div class="allorders text-center" onclick="location.href='map.html'">
+						View Map/ Geotagging
+					</div>
+					<div class="allorders text-center">
+						Troubleshooting
+					</div>
+					<div class="allorders text-center">
+						Track Packages
+					</div>
+					<div class="allorders text-center" onclick="location.href='admin-new-post-office.html'">
+						Register New Post Office
+					</div>
+				</div>
+			</div>
+
+			<!-- shipment tracking -->
+			<div class="col-sm-6 shipment-tracking">
+				<div style="border-bottom: solid 3px #091D2A">
+					<div class="shipment-tracking-heading text-center">SHIPMENT TRACKING</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<canvas id="myChart"></canvas>
+						</div>
+					</div>
+				</div>
+				<div class="eta">
+					ETA : 7days
+				</div>
+			</div>
+			<!-- shipment tracking ends -->
+			<!-- shipment details BEGIN-->
+			<div class="col-sm-4 shipment-details">
+				<div class="shipment-details-main">
+					<div class="shipment-details-heading text-center my-auto">
+						SHIPMENT DETAILS
+					</div>
+					<div>
+						<div class="livebids">
+							<div class="row" style="color: #2882B7;">
+								<div class="col">Consignment Number</div>
+								<div class="col">Last Status</div>
+								<div class="col">Booking Date</div>
+							</div>
+							<div class="row">
+								<div class="col" style="color: #F64134">123456</div>
+								<div class="col" style="color: #195577; font-weight: 500">DELHI-6</div>
+								<div class="col" style="color: #195577; font-weight: 500">DELHI-10</div>
+							</div>
+						</div>
+						<div class="livebids">
+							<div class="row" style="color: #2882B7;">
+								<div class="col">Source PIN</div>
+								<div class="col">Destination PIN</div>
+								<div class="col">Package Type</div>
+							</div>
+							<div class="row">
+								<div class="col" style="color: #F64134">123456</div>
+								<div class="col" style="color: #195577; font-weight: 500">Successfully</div>
+								<div class="col" style="color: #195577; font-weight: 500">DELHI-10</div>
+							</div>
+						</div>
+						<div class="livebids">
+							<div class="row" style="color: #2882B7;padding:1%; padding-left:4%; text-decoration: underline;">
+								Reciever Details
+							</div>
+						</div>
+						<div class="livebids">
+							<div class="row" style="color: #2882B7;">
+								<div class="col">Reciever Name</div>
+								<div class="col">Relationship</div>
+								<div class="col">Phone</div>
+							</div>
+							<div class="row">
+								<div class="col" style="color: #F64134">123456</div>
+								<div class="col" style="color: #195577; font-weight: 500">DELHI-6</div>
+								<div class="col" style="color: #195577; font-weight: 500">DELHI-10</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="past" style="height: 40vh;">
+					<div class="post-history-heading text-center my-auto">
+						POST HISTORY
+					</div>
+					<div>
+						<div class="prevbids">
+							<div class="row" style="color: #2882B7; display:flex;">
+								<div class="col">Recipient</div>
+								<div class="col">Destination</div>
+								<div class="col">Status</div>
+							</div>
+							<div class="row text-left">
+								<div class="col" style="color: #195577;">Aakash</div>
+								<div class="col" style="color: #F64134">Delhi</div>
+								<div class="col" style="color: #1F732D; font-weight: 500">Delivered</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- LIVE ORDER ENDS -->
+
+
+
+		</div>
+		<!-- BIG CONTENT ENDS-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<script type="text/javascript">
+			var data = [2, 2, 2, 2, 2, 2];
+
+			var ctx = document.getElementById('myChart').getContext('2d');
+			var chart = new Chart(ctx, {
+				// The type of chart we want to create
+				type: 'line',
+
+				// The data for our dataset
+				data: {
+					labels: ["Booked", "Dispatched", "In Transit", "At Destination", "Out For Delivery",
+						"Delivered"
+					],
+					datasets: [{
+						lineTension: 0,
+						label: "Shipment Status",
+						borderColor: 'rgba(39,230,48,0.7)',
+						data: data
+					}]
+				},
+
+				// Configuration options go here
+				options: {
+					tooltips: {
+						callbacks: {
+							label: function () {
+								return "Status : Success";
+							}
+						}
+					},
+					scales: {
+						yAxes: [{
+							display: false,
+							ticks: {
+								min: 1,
+								max: 3,
+								stepSize: 1
+							}
+						}]
+					}
+				}
+			});
+		</script>
+	</div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	    crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	    crossorigin="anonymous"></script>
+	<script>
+		$('.ham').click(() => {
+			location.href = "#s-bar";
+			$('.admin-panel').animate({
+				height: "toggle",
+				width: "toggle",
+				opacity: "toggle"
+			});
+
+		});
+		if (window.innerWidth < 500) {
+			$('.ham').click();
+		}
+	</script>
+</body>
+
+</html>
+
+
+<!-- COLOR PALLETTE
+
+ 	primary : #13171B
+	secondary : #091D2A
+	highlight : #34AAEF
+	text-green : #1F732D
+	text-red : #F64134
+	text-muted : #195577
+	text-primary : #2882B7 
+
+-->

@@ -1,0 +1,15 @@
+{
+  "package": {
+    "booking_date": "Thursday, 29 March 2018 08:39PM", 
+    "consignment_id": "EU123499888IN", 
+    "delivery_cost": 200, 
+    "destination": "Goa", 
+    "package_type": "SPA", 
+    "receiver_address": "Indirapuram, Ghaziabad", 
+    "receiver_name": "Ojasvini Luker", 
+    "sender_address": "Vasundhara, Ghaziabad", 
+    "sender_name": "Kautuk Kundan", 
+    "source": "New Delhi", 
+    "weight": 25
+  }
+}

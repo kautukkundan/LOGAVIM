@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+
+    <title>DeliveryMan</title>
+
+    <link rel="stylesheet" href="dash.css">
+    </style>
+</head>
+
+<body style="background: #13171B; margin: 0; font-family: 'Raleway'">
+
+    <div class="container-fluid">
+        <!-- LATEST ORDER BEGINS-->
+        <div class="row" style="background: #091D2A; height: 7vh; line-height: 7vh; font-size: 5vh;display:flex; justify-content: space-between;">
+            <div style="color: #34AAEF; padding-left: 1rem;">
+                LOGA
+                <strong style="color: #195577;">VIM</strong>
+            </div>
+            <div style="color: #9C9C9C;font-size: 3vh;">Team&nbsp;CheckPost</div>
+            <div style="color: #34AAEF; cursor: pointer; font-size: 3vh; padding-right:1rem;" onclick="location.href='login.html'">Login as Administrator</div>
+        </div>
+        <!-- LATEST ORDER ENDS-->
+        <div style="width: 100vw;">
+            <div style="margin:0 auto;width:60vw;padding:0.5rem;">
+                <input type="text" name="input" style="outline:none;font-size: 1.5vh;background: #123F5D; border: none; width: 79%;height: 5vh;color: #34AAEF; padding: 0 5%"
+                    placeholder="ENTER TRACKING ID">
+                <button class="btn btn-danger" style="font-size: 1.5vh;border-radius: 0; width: 20%;height: 5vh;outline: none;">Search</button>
+            </div>
+        </div>
+        <!-- BIG CONTENT -->
+        <div class="row">
+
+            <!-- ALL ORDERS -->
+            <div class="col-3" style="display:none;height: 88vh; border: solid 3px #091D2A; padding: 0; border-top: none">
+                <div class="all" style="border-bottom: solid 3px #091D2A">
+                    <div class="alltitile text-center my-auto" style="height: 5vh; background: #091D2A; color: #195577;  line-height: 5vh; font-weight: 500">
+                        YOUR ORDERS
+                    </div>
+                </div>
+                <div style="height: 82.5vh; overflow-y: hidden;">
+                    <div class="allorders" style="font-size: 1.5vh; padding: 5%; border-bottom: solid 2px #091D2A;">
+                        <div class="row" style="color: #2882B7;">
+                            <div class="col">PRODUCT</div>
+                            <div class="col">YOUR BID</div>
+                            <div class="col">PICKUP</div>
+                            <div class="col">DROP</div>
+                        </div>
+                        <div class="row">
+                            <div class="col" style="color: #1F732D">23124574</div>
+                            <div class="col" style="color: #F64134">RS1200</div>
+                            <div class="col" style="color: #195577; font-weight: 500">DELHI-6</div>
+                            <div class="col" style="color: #195577; font-weight: 500">DELHI-10</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ALL ORDER ENDS -->
+
+
+            <!-- LIVE ORDERS BEGINS-->
+            <div class="col-4" style="height: 88vh; border: solid 3px #091D2A; padding: 0; border-top: none">
+                <div class="currentbidtitile text-center my-auto" style="height: 5vh; background: #091D2A; color: #195577;  line-height: 5vh; font-weight: 500">
+                    SHIPMENT DETAILS
+                </div>
+                <div style="height: 54vh; overflow-y: hidden;">
+                    <div class="livebids" style="font-size: 1.5vh; padding: 5%; border-bottom: solid 2px #091D2A;">
+                        <div class="row" style="color: #2882B7;">
+                            <div class="col">Tracking Number</div>
+                            <div class="col">Last Status</div>
+                            <div class="col">Booking Date</div>
+                        </div>
+                        <div class="row">
+                            <div class="col" style="color: #F64134">123456</div>
+                            <div class="col" style="color: #195577; font-weight: 500">DELHI-6</div>
+                            <div class="col" style="color: #195577; font-weight: 500">DELHI-10</div>
+                        </div>
+                    </div>
+                    <div class="livebids" style="font-size: 1.5vh; padding: 5%; border-bottom: solid 2px #091D2A;">
+                        <div class="row" style="color: #2882B7;">
+                            <div class="col">Origin</div>
+                            <div class="col">Destination</div>
+                            <div class="col">Service Type</div>
+                        </div>
+                        <div class="row">
+                            <div class="col" style="color: #F64134">123456</div>
+                            <div class="col" style="color: #195577; font-weight: 500">Successfully</div>
+                            <div class="col" style="color: #195577; font-weight: 500">DELHI-10</div>
+                        </div>
+                    </div>
+                    <div class="livebids" style="font-size: 1.5vh; padding: 5%; border-bottom: solid 2px #091D2A;">
+                        <div class="row" style="color: #2882B7;">
+                            <div class="col">Package Content</div>
+                            <div class="col">Service Type</div>
+                            <div class="col">No. of Pieces</div>
+                        </div>
+                        <div class="row">
+                            <div class="col" style="color: #F64134">123456</div>
+                            <div class="col" style="color: #195577; font-weight: 500">DELHI-6</div>
+                            <div class="col" style="color: #195577; font-weight: 500">DELHI-10</div>
+                        </div>
+                    </div>
+                    <div class="" style="font-size: 1.5vh; padding: 0%; border-bottom: solid 2px #091D2A;">
+                        <div class="row" style="color: #2882B7;padding:1%; padding-left:9%; text-decoration: underline;">
+                            Reciever Details
+                        </div>
+                        <div class="row">
+                        </div>
+                    </div>
+                    <div class="livebids" style="font-size: 1.5vh; padding: 5%; border-bottom: solid 2px #091D2A;">
+                        <div class="row" style="color: #2882B7;">
+                            <div class="col">Reciever Name</div>
+                            <div class="col">Relationship</div>
+                            <div class="col">Phone</div>
+                        </div>
+                        <div class="row">
+                            <div class="col" style="color: #F64134">123456</div>
+                            <div class="col" style="color: #195577; font-weight: 500">DELHI-6</div>
+                            <div class="col" style="color: #195577; font-weight: 500">DELHI-10</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- LIVE ORDER ENDS -->
+
+
+            <!-- UNDECIDED -->
+            <div class="col-8" style="height: 88vh; border: solid 3px #091D2A; border-top: none; padding: 0;">
+                <div class="all" style="border-bottom: solid 3px #091D2A">
+
+                    <div style="background: #091D2A; height: 5vh;line-height: 5vh;color: #195577;  line-height: 5vh; font-weight: 500" class="text-center">SHIPMENT TRACKING</div>
+                    <div class="row" style="width: 100%; margin: auto;">
+                        <div class="col-12">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:flex; align-items: center; justify-content: space-between; padding: 20px; color:#195577; font-size:32px; text-align: center;">
+                    <p> ETA : 7days</p>
+
+                    <p>Mode of Shipment:
+                        <select disabled style="font-size: 20px;">
+                            <option value="standard">Standard</option>
+                            <option value="priority">Priority</option>
+                            <option value="express">Express</option>
+                        </select>
+                    </p>
+                </div>
+            </div>
+            <!-- UNDECIDED -->
+
+        </div>
+        <!-- BIG CONTENT ENDS-->
+
+        <script type="text/javascript">
+            var data = [2, 2, 2, 2, 2, 2];
+
+            // function calc(x) {
+            //     switch (x) {
+            //         case 1:
+            //             {
+            //                 r = 45;
+            //                 g = 45;
+            //                 b = 45;
+            //             }
+            //             break;
+            //         case 2:
+            //             {
+            //                 r = 145;
+            //                 g = 145;
+            //                 b = 145;
+            //             }
+            //             break;
+            //         case 3:
+            //             {
+            //                 r = 245;
+            //                 g = 245;
+            //                 b = 245;
+            //             }
+            //             break;
+            //         case 4:
+            //             {
+            //                 r = 415;
+            //                 g = 415;
+            //                 b = 415;
+            //             }
+            //             break;
+            //         case 5:
+            //             {
+            //                 r = 445;
+            //                 g = 445;
+            //                 b = 445;
+            //             }
+            //             break;
+            //         case 6:
+            //             {
+            //                 r = 459;
+            //                 g = 459;
+            //                 b = 459;
+            //             }
+            //             break;
+            //     }
+            //     return 'rgba(' + r + ',' + g + ',' + b + ',1)';
+            // }
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+
+                // The data for our dataset
+                data: {
+                    labels: ["Booked", "Dispatched", "In Transit", "At Destination", "Out For Delivery",
+                        "Delivered"
+                    ],
+                    datasets: [{
+                        lineTension: 0,
+                        label: "Shipment Status",
+                        borderColor: 'rgba(39,230,48,0.7)',
+                        data: data
+                    }]
+                },
+
+                // Configuration options go here
+                options: {
+                    tooltips: {
+                        callbacks: {
+                            label: function (t, data) {
+                                return "Status : " + "Success";
+                            }
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: false,
+                            ticks: {
+                                min: 1,
+                                max: 3,
+                                stepSize: 1
+                            }
+                        }]
+                    }
+                }
+            });
+        </script>
+
+
+        <script type="text/javascript">
+            function multiplyNode(node, count, deep) {
+                for (var i = 0, copy; i < count - 1; i++) {
+                    copy = node.cloneNode(deep);
+                    node.parentNode.insertBefore(copy, node);
+                }
+            }
+
+            multiplyNode(document.querySelector('.allorders'), 20, true);
+            multiplyNode(document.querySelector('.prevbids'), 20, true);
+        </script>
+
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+<!-- COLOR PALLETTE
+
+ 	primary : #13171B
+	secondary : #091D2A
+	highlight : #34AAEF
+	text-green : #1F732D
+	text-red : #F64134
+	text-muted : #195577
+	text-primary : #2882B7 
+
+-->

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_package_details"
+            android:title="Package Details" />
+        <item
+            android:id="@+id/nav_scan_code"
+            android:title="Scan Code"
+            />
+        <item
+            android:id="@+id/nav_track_package"
+            android:title="Track Package" />
+        <item
+            android:id="@+id/nav_calculate_postage"
+            android:title="Calculate Postage" />
+        <item
+            android:id="@+id/nav_find_pincode"
+            android:title="Find Pincode" />
+     </group>
+
+    <item android:title="Help Desk">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:title="Share with Friends" />
+            <item
+                android:id="@+id/nav_website"
+                android:title="Visit Wesbite" />
+        </menu>
+    </item>
+</menu>

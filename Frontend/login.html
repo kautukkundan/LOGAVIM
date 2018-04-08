@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#212121" />
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+	    crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Login | Coshare</title>
+	<link rel="stylesheet" href="logreg.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="card">
+			<h3 class="display-5 text-center mb-5">Login</h3>
+			<!-- LOGIN -->
+			<div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+				<div class="input-group mb-3 col-lg-12">
+					<div class="input-group-prepend">
+						<span class="input-group-text width-100">ID</span>
+					</div>
+					<input id="username" type="text" class="form-control">
+				</div>
+				<div class="input-group mb-3 col-lg-12">
+					<div class="input-group-prepend">
+						<span class="input-group-text width-100">ROLE</span>
+					</div>
+					<select class="form-control">
+						<option value="">--select--</option>
+						<option value="publicUser">Public User</option>
+						<option value="administrator">Administrator</option>
+						<option value="poSecretary">Post Office Secretary</option>
+					</select>
+				</div>
+				<div class="input-group mb-3 col-lg-12">
+					<div class="input-group-prepend">
+						<span class="input-group-text width-100">PASSWORD</span>
+					</div>
+					<input id="password" type="password" class="form-control">
+				</div>
+				<button type="button" class="btn btn-primary col-lg-12 special">LOGIN</button>
+			</div>
+		</div>
+		<a href="register.html" class="btn btn-center btn-outline-info col-4 mt-5">
+			Don't have an account yet? Register Now
+		</a>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>

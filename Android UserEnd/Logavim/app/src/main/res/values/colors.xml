@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#235fe1</color>
+    <color name="colorPrimaryDark">#1e1156</color>
+    <color name="colorAccent">#4cb8e6</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="pinkdrawabledark">#b90657</color>
+    <color name="pinkdrawabledark1">#870942</color>
+    <color name="pinkdrawable">#ff0375</color>
+    <color name="animation1">#1d0e33</color>
+    <color name="black">#FF000000</color>
+    <color name="pinkytab">#e41f7e</color>
+    <color name="bluetab">#304ffe</color>
+    <color name="darkbluetab">#FF1A237E</color>
+    <color name="voilettab">#464297</color>
+    <color name="animation2">#be75e9</color>
+    <color name="btn_login_bg">#eceef1</color>
+    <color name="lbl_name">#616161</color>
+    <color name="btn_logut_bg">#ff6861</color>
+    <color name="post_detail">#b3e5fc</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="post_btn">#42a5f5</color>
+    <color name="lightblue">#64b5f6</color>
+    <color name="pink">#fa9dec</color>
+    <color name="materialreddark">#B71C1C</color>
+    <color name="materialredlight">#E53935</color>
+    <color name="materialindigolight">#651FFF</color>
+    <color name="materialindigodark">#4527A0</color>
+</resources>

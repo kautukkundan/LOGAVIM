@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_package_update"
+            android:title="Package Update" />
+        <item
+            android:id="@+id/nav_admin_panel"
+            android:title="Admin Panel"
+            />
+     </group>
+
+    <item android:title="Help Desk">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:title="Share with Friends" />
+            <item
+                android:id="@+id/nav_website"
+                android:title="Visit Wesbite" />
+        </menu>
+    </item>
+</menu>

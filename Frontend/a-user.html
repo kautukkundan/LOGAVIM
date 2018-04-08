@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LOGAVIM | Track Consignment</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./libs/bootstrap.min.css">
+    <link href="./libs/raleway.css" rel="stylesheet">
+    <title>Track Consignment | LOGAVIM</title>
+    <link rel="stylesheet" href="a-dash.css">
+</head>
+
+<body>
+    <!-- header BEGINS-->
+    <div class="header row mb-3">
+        <div class="header-brand">
+            INDIA
+            <strong>POST</strong>
+        </div>
+        <div class="header-team-name">LOGAVIM</div>
+    </div>
+    <!-- header ENDS-->
+    <!-- body starts -->
+    <div class="container">
+        <div class="body row">
+            <div class="search col-12">
+                <div class="search-bar row">
+                    <div class="col-12">
+                        <div class="row mb-2">
+                            <div class="col-12">
+                                <h4 class="text-red text-center">Track Consignment Number</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="form-group">
+                                    <input type="text" id="con-id" class="form-control" placeholder="Enter Consignment Number...">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <button id="search-con" class="btn btn-red">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-results row">
+                    <div class="card col-12">
+                        <div class="card-block p-3">
+                            <div class="row text-center">
+                                <div class="col-6">
+                                    <strong>Consignment Number</strong>
+                                    <br>
+                                    <p id="consignment-num">Infinity War</p>
+                                </div>
+                                <div class="col-6">
+                                    <strong>Sent by</strong>
+                                    <br>
+                                    <p id="sent-by">Stan Lee</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <table class="table table-sm table-striped table-bordered text-center">
+                                    <tr>
+                                        <th>Booked At</th>
+                                        <th>Booked On</th>
+                                        <th>Destination Pincode</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Vasundhra S.O</td>
+                                        <td>22/03/2018</td>
+                                        <td>110059</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Delivered At</th>
+                                        <th>Delivered On</th>
+                                        <th>Article Type</th>
+                                    </tr>
+                                    <tr>
+                                        <td>London</td>
+                                        <td>April 27</td>
+                                        <td>SPA</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- body ends -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            $('#search-con').click(e => {
+                var id = $('#con-id').val();
+                var url = 'http://192.168.43.82:5000/pkg/' + id;
+                $.get(url)
+                .done(data =>{ 
+                    console.log(data.package);
+                    var date = data.package.booking_date;
+                    console.log(Date.parseDate(date));
+                })
+                .fail(err => console.log(err));
+                // fetch(url,{mode:'no-cors'})
+                //     .then(res=>{retures.json()})
+                //     .then(res=>console.log(res));
+            });
+        });
+    </script>
+</body>
+
+</html>

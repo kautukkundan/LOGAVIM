@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./libs/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="./libs/raleway.css" rel="stylesheet">
+  <title>Hello, world!</title>
+
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Raleway', sans-serif;
+      color: #595959;
+    }
+
+    .top-space {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 10vh;
+    }
+
+    .colored-body {
+      color: white;
+      margin: auto;
+      padding: 5%;
+      background: linear-gradient(#59B5A7, #59B5A7);
+    }
+
+    .icon-holder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .line {
+      width: 60%;
+      margin: auto;
+    }
+
+    .icon {
+      background: #85eaa7;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+    }
+
+    .timeline,
+    .search-res {
+      display: none;
+    }
+
+    .data {
+      font-size: 0.8rem;
+      font-style: italic;
+    }
+
+    .value {
+      font-weight: bold;
+    }
+
+    .search {
+      width: 70%;
+      border: none;
+      border-bottom: 2px solid #eee;
+      background: transparent;
+      color: #fff;
+    }
+
+    .search::-webkit-input-placeholder {
+      color: #eee;
+    }
+
+    .btn-center {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="top-space">
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <h4>LOGAVIM</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="colored-body">
+    <div class="row text-center">
+      <div class="col title pt-5">
+        <h4>TRACK YOUR PACKAGE</h4>
+      </div>
+    </div>
+    <br>
+    <div class="row text-center">
+      <div class="col">
+        <img src="./boxes.png">
+      </div>
+    </div>
+    <div class="search-bar my-3">
+      <div class="text-center">
+        <input type="text" id="con-num" class="search" placeholder="Search Consignment Number" value="EU123199854IN">
+        <button id="search-btn" class="btn btn-link" style="color: #fff;">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+    <br>
+    <div class="search-res">
+      <button id="show-search" class="my-2 btn btn-center btn-light">
+        <i class="fa fa-arrow-up"></i>
+      </button>
+      <div class="row text-center">
+        <div class="col">
+          <h6>CONSIGNMENT ID:</h6>
+          <h4 class="font-weight-bold" id="consignment_id"></h4>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div>
+        <div class="row text-center">
+          <div class="col">
+            <div class="data">SOURCE</div>
+            <div id="source" class="value">NEW DELHI</div>
+          </div>
+          <div class="col">
+            <div class="data">BOOKING DATE</div>
+            <div id="booking_date" class="value">09/03/18</div>
+          </div>
+          <div class="col">
+            <div class="data">DESTINATION</div>
+            <div id="destination" class="value">MUMBAI</div>
+          </div>
+        </div>
+        <br>
+        <div class="row text-center">
+          <div class="col">
+            <div class="data">PACKAGE TYPE</div>
+            <div id="package_type" class="value">SPA</div>
+          </div>
+          <div class="col">
+            <div class="data">WEIGHT</div>
+            <div id="weight" class="value">25gm</div>
+          </div>
+          <div class="col">
+            <div class="data">CHARGES</div>
+            <div id="delivery_cost" class="value">Rs 30</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <br>
+  <br>
+
+  <div class="timeline my-5">
+
+    <div class="text-center">
+      <h2 class="eta-key">ETA</h2>
+      <h4 class="eta-value">31/03/2018</h4>
+      <br>
+      <div class="line">
+        <hr>
+      </div>
+      <br>
+      <br>
+    </div>
+
+    <div>
+      <div class="text-center">
+        <h5>SENDER'S DETAILS</h5>
+      </div>
+
+      <br>
+      <div class="text-center">
+        <strong>
+          <h2 id="sender_name">KAUTUK KUNDAN</h2>
+        </strong>
+        <p>
+          <h5 id="sender_address">C301, Jansatta Apartments, Sector-9, Vasundhara, Ghaziabad</h5>
+        </p>
+      </div>
+      <br>
+      <div class="line">
+        <hr>
+      </div>
+      <br>
+      <br>
+    </div>
+
+    <div>
+      <div class="text-center">
+        <h5>RECEIVER'S DETAILS</h5>
+      </div>
+
+      <br>
+      <div class="text-center">
+        <strong>
+          <h2 id="receiver_name">KAUTUK KUNDAN</h2>
+        </strong>
+        <p>
+          <h5 id="receiver_address">C301, Jansatta Apartments, Sector-9, Vasundhara, Ghaziabad</h5>
+        </p>
+      </div>
+      <br>
+      <div class="line">
+        <hr>
+      </div>
+      <br>
+      <br>
+    </div>
+
+    <div class="actual-timeline">
+      <div class="text-center">
+        <h2>TIMELINE</h2>
+      </div>
+      <br>
+      <div class="perdata"></div>
+    </div>
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(() => {
+      $('#show-search').click(() => {
+        $('.search-bar').slideToggle();
+        var orig = $('#show-search').html();
+        var dir = (orig.includes("down")) ? "up" : "down";
+        var str = "<i class='fa fa-arrow-" + dir + "'></i>";
+        $('#show-search').html(str);
+      });
+      $('#search-btn').click(() => {
+        var con_num = $('#con-num').val();
+        console.log("request sent");
+        // $.get('./track-package-response.json')
+        $.get('http://192.168.43.82:5000/pkg/' + con_num) 
+          .done(data => {
+            $('#show-search').click();
+            $('.timeline').css('display', 'block');
+            $('.search-res').css('display', 'block');
+            var pkg = data.package;
+            pkg.booking_date = pkg.booking_date.substring(0, pkg.booking_date.length - 8);
+            pkg.booking_date = (new Date(Date.parse(pkg.booking_date))).toLocaleDateString();
+            $('#booking_date').html(pkg.booking_date);
+            $('#consignment_id').html(pkg.consignment_id);
+            $('#delivery_cost').html(pkg.delivery_cost);
+            $('#destination').html(pkg.destination);
+            $('#package_type').html(pkg.package_type);
+            $('#receiver_address').html(pkg.receiver_address);
+            $('#receiver_name').html(pkg.receiver_name);
+            $('#sender_address').html(pkg.sender_address);
+            $('#sender_name').html(pkg.sender_name);
+            $('#source').html(pkg.source);
+            $('#weight').html(pkg.weight + 'gm');
+
+            $.get('http://192.168.43.82:5000/eta/' + con_num)
+              .done(res => {
+                console.log('eta aa gaya');
+                $('.eta-value').html(res.ETA);
+              })
+              .fail();
+
+            $.get('http://192.168.43.82:5000/scan/' + con_num)
+              .done(data2 => {
+                console.log('scan aa gaya');
+                var str = "";
+                data2.package.scans.forEach(element => {
+                  str +=
+                    `<div class="col">
+                      <div class="row">
+                        <div class="col-2 icon-holder">
+                          <div class="icon"></div>
+                        </div>
+                        <div class="col-10">
+                          <strong>${element.timestamp}</strong>
+                          <br>
+                          <span>${element.stamp}</span>
+                          <span>${element.location}</span>
+                        </div>
+                      </div>
+                      <hr>
+                    </div>`;
+                });
+                $('.perdata').html(str);
+              })
+              .fail(err => console.error(err));
+          })
+          .fail(err => {
+            console.error(err);
+          });
+      });
+    });
+  </script>
+</body>
+
+</html>

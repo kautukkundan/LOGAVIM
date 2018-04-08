@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:scaleY="1"
+        android:adjustViewBounds="true"
+        android:forceHasOverlappingRendering="true"
+        android:scaleX="1"
+        android:id="@+id/qrcodeimg"
+        android:src="@drawable/qrcodeback"/>
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:padding="4dp"
+        android:background="@drawable/scanqr"
+        android:textColor="@color/white"
+        android:drawableTint="@color/white"
+        android:drawableTintMode="src_over"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBottom="@id/qrcodeimg"
+        android:layout_alignParentRight="true"
+        android:id="@+id/read_barcode" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        android:text="Scan Consignment Code"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/auto_focus"
+        android:id="@+id/auto_focus"
+        android:layout_weight="1"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/use_flash"
+        android:id="@+id/use_flash"
+        android:layout_weight="1"
+        android:checked="false" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_height="wrap_content"
+        android:id="@+id/status_message"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="23dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/constext"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Consignment No. : "/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/barcode_value"
+        android:layout_weight="1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:id="@+id/submit_consid"
+        android:background="#0595c1"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:text="Submit"/>
+</LinearLayout>

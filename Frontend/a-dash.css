@@ -1,0 +1,77 @@
+:root {
+    --body-bg: #fff;
+    --bg-light: #efefef;
+    --bg-light-hover: #1a253b;
+    --text-secondary: #195577;
+    --text-primary: #2882B7;
+    --indiapost-red: #b02925;
+}
+
+.header {
+    background: var(--bg-light);
+    height: 3.2rem;
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-brand{
+    padding-left: 1.3rem;
+    color: var(--indiapost-red);
+}
+
+.header-team-name {
+    color: #888;
+    font-size: 1.8rem;
+    padding-right: 1rem;
+}
+
+.header-team-name:hover{
+    color:#333;
+}
+
+.side-tools{
+    margin: 0 24px;
+}
+
+.side-tools ul{
+    list-style-type: none;
+    border: 1px solid #888;
+    padding: 0;
+}
+
+.side-tools ul li{
+    padding: 12px;
+    border-top: 1px solid #bbb;
+}
+
+.side-tools ul li a{
+    color: #333;
+}
+
+.side-tools ul li a:hover{
+    color: var(--indiapost-red);
+    text-decoration: none;
+}
+
+.side-tools .list-head{
+    background-color: var(--indiapost-red);
+    color: white;
+    font-weight: bold;
+}
+
+/* btn */
+.btn-red{
+    background-color: var(--indiapost-red);
+    color: white;
+    opacity: 0.9;
+}
+
+.btn-red:hover{
+    opacity: 1;
+}
+
+.text-red{
+    color: var(--indiapost-red);
+}

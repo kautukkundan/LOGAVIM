@@ -1,0 +1,20 @@
+<tabs>
+    <tab
+        id="@+id/tab_main"
+        title="Home"
+        icon="@drawable/homeicon"
+        barColorWhenSelected="#1e1156"/>
+    <tab
+        id="@+id/tab_help"
+        title="Help"
+        icon="@drawable/helpicon"
+        barColorWhenSelected="#FF1A237E"
+        />
+
+     <!--<tab
+         id="@+id/tab_locate"
+         title="Locate"
+         icon="@drawable/findicon"
+         barColorWhenSelected="#FF1A237E"/>
+-->
+ </tabs>

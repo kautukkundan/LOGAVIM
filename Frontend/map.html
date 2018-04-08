@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+
+    <title>DeliveryMan</title>
+    <style>
+        #map-india {
+            height: 50vh;
+        }
+    </style>
+
+    <link rel="stylesheet" href="dash.css">
+</head>
+
+<body style="background: #13171B; margin: 0; font-family: 'Raleway'">
+
+    <div class="container-fluid">
+        <!-- LATEST ORDER BEGINS-->
+        <div class="row" style="background: #091D2A; height: 7vh; line-height: 7vh; font-size: 5vh;display:flex; justify-content: space-between;">
+            <div style="color: #34AAEF; padding-left: 1rem;">LOGA
+                <strong style="color: #195577;">VIM</strong>
+            </div>
+            <div style="color: #9C9C9C;font-size: 3vh;">Team&nbsp;CheckPost</div>
+
+            <div style="color: #34AAEF; cursor: pointer; font-size: 3vh; padding-right:1rem;" onclick="location.href='login.html'">Logout</div>
+        </div>
+        <!-- LATEST ORDER ENDS-->
+        <div style="width: 100vw;">
+            <div style="margin:0 auto;width:60vw;padding:0.5rem;">
+                <input type="text" name="input" style="outline:none;font-size: 1.5vh;background: #123F5D; border: none; width: 79%;height: 5vh;color: #34AAEF; padding: 0 5%"
+                    placeholder="ENTER TRACKING ID">
+                <button class="btn btn-danger" style="font-size: 1.5vh;border-radius: 0; width: 20%;height: 5vh;outline: none;">Search</button>
+            </div>
+        </div>
+
+        <!-- BIG CONTENT -->
+        <div class="row">
+            <div class="col-2" style="height: 88vh; border: solid 3px #091D2A; padding: 0; border-top: none">
+                <div class="all" style="border-bottom: solid 3px #091D2A">
+                    <div class="alltitile text-center my-auto" style="height: 5vh; background: #091D2A; color: #195577;  line-height: 5vh; font-weight: 500">
+                        ADMIN ACTIONS
+                    </div>
+                </div>
+                <div style="height: 82.5vh; overflow-y: hidden;">
+                    <div class="allorders" style="font-size: 1.5vh; padding: 5%; border-bottom: solid 2px #091D2A;">
+                        <div class="" style="color: #2882B7; text-align:center;">
+                            Register New Post Office
+                        </div>
+                    </div>
+                    <div class="allorders" style="font-size: 1.5vh; padding: 5%; border-bottom: solid 2px #091D2A;" onclick="location.href='map.html'">
+                        <div class="" style="color: #2882B7; text-align:center;">
+                            View Map/ Geotagging
+                        </div>
+                    </div>
+                    <div class="allorders" style="font-size: 1.5vh; padding: 5%; border-bottom: solid 2px #091D2A;">
+                        <div class="" style="color: #2882B7; text-align:center;">
+                            Block Users
+                        </div>
+                    </div>
+                    <div class="allorders" style="font-size: 1.5vh; padding: 5%; border-bottom: solid 2px #091D2A;">
+                        <div class="" style="color: #2882B7; text-align:center;">
+                            Troubleshooting
+                        </div>
+                    </div>
+                    <div class="allorders" style="font-size: 1.5vh; padding: 5%; border-bottom: solid 2px #091D2A;" onclick="location.href='admin.html'">
+                        <div class="" style="color: #2882B7; text-align:center;">
+                            Track Packages
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UNDECIDED -->
+            <div class="col-10" style="height: 88vh; border: solid 3px #091D2A; border-top: none; padding: 0;">
+                <div class="all" style="border-bottom: solid 3px #091D2A">
+
+                    <div style="background: #091D2A; height: 5vh;line-height: 5vh;color: #195577;  line-height: 5vh; font-weight: 500" class="text-center">New Post Office Portal</div>
+                    <div class="row">
+                        <div id="map-india" style="position:relative; z-index: 10;"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- UNDECIDED -->
+        </div>
+        <!-- BIG CONTENT ENDS-->
+
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUNbtArqyJdXw5ewEZIgo493_Lue49HUs&callback=initMap"
+        type="text/javascript"></script>
+    <script>
+        function initMap() {
+            var uluru = {
+                lat: 28.424745,
+                lng: 77.068214
+            };
+            var map = new google.maps.Map(document.getElementById('map-india'), {
+                zoom: 18,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                title: "Post Office, Welcome"
+            });
+            marker.addListener('click', function () {
+                if (marker.getAnimation() !== null) {
+                    marker.setAnimation(null);
+                } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
+            });
+            var infowindow = new google.maps.InfoWindow()
+            google.maps.event.addListener(marker, 'mouseover', (function (marker, content, infowindow) {
+                return function () {
+                    infowindow.setContent(marker.title);
+                    infowindow.open(map, marker);
+                };
+            })(marker, 'hi', infowindow));
+        }
+    </script>
+</body>
+
+</html>
