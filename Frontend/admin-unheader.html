@@ -44,20 +44,17 @@
 					</div>
 				</div>
 				<div style="height: 40vh; overflow-y: hidden;">
+					<div class="allorders text-center" onclick="location.href='add-parcel.html'">
+						Add New Package
+					</div>
+					<div class="allorders text-center" onclick="location.href='index.html'">
+						Track Packages
+					</div>
 					<div class="allorders text-center" onclick="location.href='admin-new-post-office.html'">
 						Register New Post Office
 					</div>
-					<div class="allorders text-center" onclick="location.href='map.html'">
-						View Map/ Geotagging
-					</div>
-					<div class="allorders text-center">
-						Block Users
-					</div>
-					<div class="allorders text-center">
+					<div class="allorders text-center" onclick="location.href='https://www.indiapost.gov.in/VAS/Pages/Content/ContactUs.aspx'">
 						Troubleshooting
-					</div>
-					<div class="allorders text-center">
-						Track Packages
 					</div>
 				</div>
 			</div>
@@ -86,7 +83,7 @@
 					<div>
 						<div class="livebids">
 							<div class="row" style="color: #2882B7;">
-								<div class="col">Tracking Number</div>
+								<div class="col">Consignment Number</div>
 								<div class="col">Last Status</div>
 								<div class="col">Booking Date</div>
 							</div>
@@ -98,25 +95,13 @@
 						</div>
 						<div class="livebids">
 							<div class="row" style="color: #2882B7;">
-								<div class="col">Origin</div>
-								<div class="col">Destination</div>
-								<div class="col">Service Type</div>
+								<div class="col">Source PIN</div>
+								<div class="col">Destination PIN</div>
+								<div class="col">Package Type</div>
 							</div>
 							<div class="row">
 								<div class="col" style="color: #F64134">123456</div>
 								<div class="col" style="color: #195577; font-weight: 500">Successfully</div>
-								<div class="col" style="color: #195577; font-weight: 500">DELHI-10</div>
-							</div>
-						</div>
-						<div class="livebids">
-							<div class="row" style="color: #2882B7;">
-								<div class="col">Package Content</div>
-								<div class="col">Service Type</div>
-								<div class="col">No. of Pieces</div>
-							</div>
-							<div class="row">
-								<div class="col" style="color: #F64134">123456</div>
-								<div class="col" style="color: #195577; font-weight: 500">DELHI-6</div>
 								<div class="col" style="color: #195577; font-weight: 500">DELHI-10</div>
 							</div>
 						</div>
@@ -212,20 +197,6 @@
 				}
 			});
 		</script>
-
-
-		<script type="text/javascript">
-			function multiplyNode(node, count, deep) {
-				for (var i = 0, copy; i < count - 1; i++) {
-					copy = node.cloneNode(deep);
-					node.parentNode.insertBefore(copy, node);
-				}
-			}
-
-			multiplyNode(document.querySelector('.prevbids'), 7, true);
-		</script>
-
-
 	</div>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -236,16 +207,16 @@
 	    crossorigin="anonymous"></script>
 	<script>
 		$('.ham').click(() => {
-			location.href="#s-bar";
+			location.href = "#s-bar";
 			$('.admin-panel').animate({
-                    height: "toggle",
-					width: "toggle",
-					opacity: "toggle"
-                });
+				height: "toggle",
+				width: "toggle",
+				opacity: "toggle"
+			});
 
 		});
-		if(window.innerWidth < 500){
-			$('.ham').click();	
+		if (window.innerWidth < 500) {
+			$('.ham').click();
 		}
 	</script>
 </body>

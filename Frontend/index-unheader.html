@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./libs/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="./libs/raleway.css" rel="stylesheet">
-  <title>Hello, world!</title>
+  <title>Tracking Package</title>
 
   <style type="text/css">
     body {
@@ -87,13 +87,19 @@
 <body>
   <div class="colored-body">
     <div class="row text-center">
+      <div class="col title pt-5">
+        <h4>TRACK YOUR PACKAGE</h4>
+      </div>
+    </div>
+    <br>
+    <div class="row text-center">
       <div class="col">
         <img src="./boxes.png">
       </div>
     </div>
     <div class="search-bar my-3">
       <div class="text-center">
-        <input type="text" id="con-num" class="search" placeholder="Search Consignment Number" value="EU113499880IN">
+        <input type="text" id="con-num" class="search" placeholder="Search Consignment Number" value="EU123199854IN">
         <button id="search-btn" class="btn btn-link" style="color: #fff;">
           <i class="fa fa-search"></i>
         </button>
@@ -237,41 +243,42 @@
       $('#search-btn').click(() => {
         var con_num = $('#con-num').val();
         console.log("request sent");
-        // $.get('./track-package-response.json')
-        $.get('http://192.168.43.82:5000/pkg/' + con_num)
+        $.get('https://nahidunga.herokuapp.com//pkg/' + con_num)
           .done(data => {
-            $('#show-search').click();
-            $('.timeline').css('display', 'block');
-            $('.search-res').css('display', 'block');
-            var pkg = data.package;
-            pkg.booking_date = pkg.booking_date.substring(0, pkg.booking_date.length - 8);
-            pkg.booking_date = (new Date(Date.parse(pkg.booking_date))).toLocaleDateString();
-            $('#booking_date').html(pkg.booking_date);
-            $('#consignment_id').html(pkg.consignment_id);
-            $('#delivery_cost').html(pkg.delivery_cost);
-            $('#destination').html(pkg.destination);
-            $('#package_type').html(pkg.package_type);
-            $('#receiver_address').html(pkg.receiver_address);
-            $('#receiver_name').html(pkg.receiver_name);
-            $('#sender_address').html(pkg.sender_address);
-            $('#sender_name').html(pkg.sender_name);
-            $('#source').html(pkg.source);
-            $('#weight').html(pkg.weight + 'gm');
+            console.log(data);
+            if (!data.message) {
+              $('#show-search').click();
+              $('.timeline').css('display', 'block');
+              $('.search-res').css('display', 'block');
+              var pkg = data.package;
+              pkg.booking_date = pkg.booking_date.substring(0, pkg.booking_date.length - 8);
+              pkg.booking_date = (new Date(Date.parse(pkg.booking_date))).toLocaleDateString();
+              $('#booking_date').html(pkg.booking_date);
+              $('#consignment_id').html(pkg.consignment_id);
+              $('#delivery_cost').html(pkg.delivery_cost);
+              $('#destination').html(pkg.destination);
+              $('#package_type').html(pkg.package_type);
+              $('#receiver_address').html(pkg.receiver_address);
+              $('#receiver_name').html(pkg.receiver_name);
+              $('#sender_address').html(pkg.sender_address);
+              $('#sender_name').html(pkg.sender_name);
+              $('#source').html(pkg.source);
+              $('#weight').html(pkg.weight + 'gm');
 
-            $.get('http://192.168.43.82:5000/eta/' + con_num)
-              .done(res => {
-                console.log('eta aa gaya');
-                $('.eta-value').html(res.ETA);
-              })
-              .fail();
+              $.get('https://nahidunga.herokuapp.com/eta/' + con_num)
+                .done(res => {
+                  console.log('eta aa gaya');
+                  $('.eta-value').html(res.ETA);
+                })
+                .fail();
 
-            $.get('http://192.168.43.82:5000/scan/' + con_num)
-              .done(data2 => {
-                console.log('scan aa gaya');
-                var str = "";
-                data2.package.scans.forEach(element => {
-                  str +=
-                    `<div class="col">
+              $.get('https://nahidunga.herokuapp.com/scan/' + con_num)
+                .done(data2 => {
+                  console.log('scan aa gaya');
+                  var str = "";
+                  data2.package.scans.forEach(element => {
+                    str +=
+                      `<div class="col">
                       <div class="row">
                         <div class="col-2 icon-holder">
                           <div class="icon"></div>
@@ -285,10 +292,15 @@
                       </div>
                       <hr>
                     </div>`;
-                });
-                $('.perdata').html(str);
-              })
-              .fail(err => console.error(err));
+                  });
+                  $('.perdata').html(str);
+                })
+                .fail(err => console.error(err));
+            }
+            else {
+              alert(data.message);
+              location.reload();
+            }
           })
           .fail(err => {
             console.error(err);

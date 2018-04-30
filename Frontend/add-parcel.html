@@ -246,7 +246,7 @@
         <img src="./boxes.png">
       </div>
     </div>
-    <div class="search-bar my-3">
+    <div class="search-bar px-3 my-3">
       <div class="group">
         <input type="text" id="sender_name" required>
         <span class="highlight"></span>
@@ -352,7 +352,7 @@
             package_type: $('#package_type').val()
           };
           console.log(obj);
-        $.post('http://192.168.43.82:5000/pkg',obj)
+        $.post('http://nahidunga.herokuapp.com/pkg',obj)
           .done(data => {
             //show qr and consignment
             console.log(data);
